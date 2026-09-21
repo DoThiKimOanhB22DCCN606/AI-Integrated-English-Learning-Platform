@@ -94,7 +94,7 @@ flowchart TD
 ├── backend/
 │   ├── core-service/              # Java 17 / Spring Boot 3 Core Backend (Port 8081)
 │   │   ├── src/
-│   │   │   ├── main/java/com/mxhieu/doantotnghiep/
+│   │   │   ├── main/java/com/
 │   │   │   │   ├── controller/   # REST Controllers (Auth, Course, AI, Speech, StudyPlan...)
 │   │   │   │   ├── service/      # Business logic layer
 │   │   │   │   ├── repository/   # Spring Data JPA repositories
