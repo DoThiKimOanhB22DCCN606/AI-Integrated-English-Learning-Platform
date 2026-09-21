@@ -1,5 +1,4 @@
 # English Certification Learning & Exam Preparation System
-### *Hệ Thống Học và Luyện Thi Chứng Chỉ Tiếng Anh (Đồ Án Tốt Nghiệp)*
 
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5.6-brightgreen.svg?logo=springboot)](https://spring.io/projects/spring-boot)
 [![Java](https://img.shields.io/badge/Java-17-orange.svg?logo=openjdk)](https://openjdk.org/)
