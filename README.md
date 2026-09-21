@@ -68,7 +68,7 @@ flowchart TD
     end
 
     subgraph Persistence["Data Tier"]
-        DB[(MySQL Database\ndb_do_an_tot_nghiep\nPort: 3306)]
+        DB[(MySQL Database\ndb_project\nPort: 3306)]
     end
 
     %% Client Interactions
@@ -150,7 +150,7 @@ flowchart TD
 - **Data Access**: Spring Data JPA, Hibernate, MySQL Connector/J
 - **Security**: Spring Security, OAuth2 Resource Server, JWT Authentication, BCrypt
 - **Artificial Intelligence**: Spring AI (Model OpenAI adapter configured with Google Gemini 2.0 Flash)
-- **Speech Processing**: Microsoft Cognitive Services Speech SDK (pronunciation assessment & audio synthesis)
+- **Speech Processing**: Microsoft Cognitive Services Speech SDK (pronunciation assessment & audio synproject)
 - **Email & Templates**: Spring Boot Starter Mail, Thymeleaf template engine
 - **Utility**: Lombok, ModelMapper, Google Guava, Apache Commons IO
 
@@ -193,16 +193,16 @@ Ensure the following runtimes and tools are installed on your host machine:
 1. Start your local MySQL server instance (default port: `3306`).
 2. Create the target database:
    ```sql
-   CREATE DATABASE db_do_an_tot_nghiep CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   CREATE DATABASE db_project CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    ```
 3. Import the consolidated schema and seed records:
    - **Using Command Line (Windows PowerShell)**:
      ```powershell
-     Get-Content database\database_merge.sql | mysql -u root -p db_do_an_tot_nghiep
+     Get-Content database\database_merge.sql | mysql -u root -p db_project
      ```
    - **Using MySQL CLI (Linux / macOS)**:
      ```bash
-     mysql -u root -p db_do_an_tot_nghiep < database/database_merge.sql
+     mysql -u root -p db_project < database/database_merge.sql
      ```
    - *Or import `database/database_merge.sql` directly via MySQL Workbench / DBeaver / Navicat.*
 
@@ -216,7 +216,7 @@ Ensure the following runtimes and tools are installed on your host machine:
    ```
 2. Verify configuration in `src/main/resources/application-uat.properties` (or `application.properties`):
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/db_do_an_tot_nghiep
+   spring.datasource.url=jdbc:mysql://localhost:3306/db_project
    spring.datasource.username=root
    spring.datasource.password=your_mysql_password
    ```
@@ -248,7 +248,7 @@ Ensure the following runtimes and tools are installed on your host machine:
      ```bash
      cp .env.example .env
      ```
-   - Update your MySQL credentials (`DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE=db_do_an_tot_nghiep`).
+   - Update your MySQL credentials (`DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE=db_project`).
 4. Start the development server with live reload:
    ```bash
    npm run dev
@@ -302,7 +302,7 @@ Ensure the following runtimes and tools are installed on your host machine:
 
 | Component | Technology | Default Port | Base URL / Entry | Health Check / Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **MySQL Database** | Relational DB | `3306` | `localhost:3306/db_do_an_tot_nghiep` | Database CLI / Admin tool |
+| **MySQL Database** | Relational DB | `3306` | `localhost:3306/db_project` | Database CLI / Admin tool |
 | **Core LMS Backend** | Spring Boot 3 | `8081` | `http://localhost:8081` | `http://localhost:8081/` |
 | **TOEIC Exam Backend** | Express / TS | `3001` | `http://localhost:3001/api/exam` | `http://localhost:3001/health` |
 | **LMS Web Client** | React 18 (CRA)| `3000` | `http://localhost:3000` | Browser application |
@@ -318,7 +318,7 @@ Managed in `src/main/resources/application.properties` and `src/main/resources/a
 | Parameter | Default / Format | Description |
 | :--- | :--- | :--- |
 | `server.port` | `8081` | HTTP listening port |
-| `spring.datasource.url` | `jdbc:mysql://localhost:3306/db_do_an_tot_nghiep` | Database connection string |
+| `spring.datasource.url` | `jdbc:mysql://localhost:3306/db_project` | Database connection string |
 | `spring.datasource.username` | `root` | Database username |
 | `spring.datasource.password` | `123456` | Database password |
 | `jwt.signer-key` | `${JWT_SIGNER_KEY}` | Secret key for JWT signing & verification |
@@ -338,7 +338,7 @@ Configured in `.env`:
 | `DB_PORT` | `3306` | MySQL Port |
 | `DB_USERNAME` | `root` | MySQL Username |
 | `DB_PASSWORD` | `your_password` | MySQL Password |
-| `DB_DATABASE` | `db_do_an_tot_nghiep` | Target database name |
+| `DB_DATABASE` | `db_project` | Target database name |
 | `JWT_SECRET` | Secret String | Shared JWT secret key (must align with Spring Boot) |
 | `CLOUDINARY_*` | Cloud credentials | Cloudinary API Key, Secret & Cloud Name |
 | `CORS_ORIGIN` | `http://localhost:3000` | Permitted origin for CORS |
