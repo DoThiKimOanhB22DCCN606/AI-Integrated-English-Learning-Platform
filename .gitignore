@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Build Outputs & Packages
+dist/
+dist-ssr/
+build/
+target/
+*.jar
+*.war
+*.ear
+*.tsbuildinfo
+
+# Logs & Diagnostics
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS Specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDE & Editor metadata
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Uploads / Runtime media storage
+uploads/
+backend/exam-service/uploads/
+!backend/exam-service/uploads/.gitkeep
+
+# Temporary / Cache
+.cache/
+.tmp/
+.temp/
