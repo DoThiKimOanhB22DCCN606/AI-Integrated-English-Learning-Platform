@@ -389,10 +389,3 @@ Configured in `.env`:
 - Both `backend/core-service` and `backend/exam-service` use JWTs. Ensure `jwt.signer-key` in Spring Boot and `JWT_SECRET` in Node.js are synchronized to permit seamless cross-service token authentication.
 
 ---
-
-## 👥 Authors & Academic Context
-
-- **Project**: Hệ Thống Học và Luyện Thi Chứng Chỉ Tiếng Anh (*English Certification Learning & Practice Examination System*)
-- **Type**: Undergraduate Graduation Thesis (Đồ án tốt nghiệp)
-- **Author**: Mai Xuan Hieu (`com.mxhieu.doantotnghiep`)
-- **License**: Academic & Educational Use
